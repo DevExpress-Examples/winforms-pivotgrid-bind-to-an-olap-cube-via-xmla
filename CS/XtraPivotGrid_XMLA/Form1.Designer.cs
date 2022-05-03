@@ -29,9 +29,12 @@ namespace XtraPivotGrid_XMLA
         private void InitializeComponent()
         {
             DevExpress.XtraPivotGrid.PivotGridGroup pivotGridGroup1 = new DevExpress.XtraPivotGrid.PivotGridGroup();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding1 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding2 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding3 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
-            this.fieldInternetSalesAmount = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldCountry = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.field = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.field1 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldYear = new DevExpress.XtraPivotGrid.PivotGridField();
             this.repositoryItemProgressBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
@@ -40,15 +43,14 @@ namespace XtraPivotGrid_XMLA
             // 
             // pivotGridControl1
             // 
-            this.pivotGridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pivotGridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pivotGridControl1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
-            this.fieldInternetSalesAmount,
-            this.fieldCountry,
+            this.field,
+            this.field1,
             this.fieldYear});
             pivotGridGroup1.Caption = "Year - Month";
-            pivotGridGroup1.Hierarchy = null;
             this.pivotGridControl1.Groups.AddRange(new DevExpress.XtraPivotGrid.PivotGridGroup[] {
             pivotGridGroup1});
             this.pivotGridControl1.Location = new System.Drawing.Point(12, 12);
@@ -58,28 +60,31 @@ namespace XtraPivotGrid_XMLA
             this.pivotGridControl1.Size = new System.Drawing.Size(651, 281);
             this.pivotGridControl1.TabIndex = 0;
             // 
-            // fieldInternetSalesAmount
+            // field
             // 
-            this.fieldInternetSalesAmount.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-            this.fieldInternetSalesAmount.AreaIndex = 0;
-            this.fieldInternetSalesAmount.Caption = "Sales";
-            this.fieldInternetSalesAmount.FieldName = "[Measures].[Internet Sales Amount]";
-            this.fieldInternetSalesAmount.Name = "fieldInternetSalesAmount";
+            this.field.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.field.AreaIndex = 0;
+            this.field.Caption = "Sales";
+            dataSourceColumnBinding1.ColumnName = "[Measures].[Internet Sales Amount]";
+            this.field.DataBinding = dataSourceColumnBinding1;
+            this.field.Name = "field";
             // 
-            // fieldCountry
+            // field1
             // 
-            this.fieldCountry.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldCountry.AreaIndex = 0;
-            this.fieldCountry.Caption = "Country";
-            this.fieldCountry.FieldName = "[Customer].[Country].[Country]";
-            this.fieldCountry.Name = "fieldCountry";
+            this.field1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.field1.AreaIndex = 0;
+            this.field1.Caption = "Country";
+            dataSourceColumnBinding2.ColumnName = "[Customer].[Country].[Country]";
+            this.field1.DataBinding = dataSourceColumnBinding2;
+            this.field1.Name = "field1";
             // 
             // fieldYear
             // 
             this.fieldYear.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
             this.fieldYear.AreaIndex = 0;
             this.fieldYear.Caption = "Year";
-            this.fieldYear.FieldName = "[Date].[Fiscal].[Fiscal Year]";
+            dataSourceColumnBinding3.ColumnName = "[Date].[Fiscal].[Fiscal Year]";
+            this.fieldYear.DataBinding = dataSourceColumnBinding3;
             this.fieldYear.Name = "fieldYear";
             // 
             // repositoryItemProgressBar1
@@ -109,8 +114,8 @@ namespace XtraPivotGrid_XMLA
 
         private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl1;
         private DevExpress.XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldInternetSalesAmount;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldCountry;
+        private DevExpress.XtraPivotGrid.PivotGridField field;
+        private DevExpress.XtraPivotGrid.PivotGridField field1;
         private DevExpress.XtraPivotGrid.PivotGridField fieldYear;
     }
 }
